@@ -1,0 +1,296 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  background-color: #fff;
+  line-height: 1.5;
+}
+
+a {
+  color: grey;
+  text-decoration: none;
+}
+
+
+body.content {
+  display: block;
+}
+
+nav {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 2;
+  overflow-y: auto;
+  padding: 16px;
+  border-right: 1px solid #ccc;
+}
+
+main.main {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  padding: 0 16px;
+}
+
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+nav .wide {
+  letter-spacing: 4px;
+  font-size: 24px;
+}
+
+nav .button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: left;
+}
+
+.bar-item {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  color: #000;
+}
+
+.bar-item:hover {
+  background-color: #ccc;
+}
+
+.clothes {
+  padding: 16px 0;
+}
+
+.bar-block {
+  padding-left: 16px;
+}
+
+.bar-block .bar-item {
+  padding: 6px 16px;
+}
+
+main > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+main > header i {
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+header:not(main > header) {
+  display: none;
+}
+
+/* --- Hero Section --- */
+.display-container {
+  position: relative;
+}
+
+.display-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.display-container > div {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  color: #fff;
+}
+
+.display-container h1 {
+  font-size: 36px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.display-container p a {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 24px;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.display-container p a:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+/* Item Count Bar */
+div > p {
+  padding: 16px 0;
+}
+
+/* --- Product Grid --- */
+section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+article {
+  position: relative;
+  border: 1px solid #f1f1f1;
+}
+
+article img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+article p {
+  padding: 12px;
+  font-size: 15px;
+}
+
+article span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+article div > button {
+  width: 100%;
+  padding: 8px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+article div > button:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+.w3-text-red {
+  color: #f44336;
+}
+
+/* --- Newsletter & Subscribe Sections --- */
+.container.section, 
+section.container {
+  background-color: #000;
+  color: #fff;
+  padding: 32px;
+  margin: 32px 0;
+}
+
+.container.section h1 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  display: block;
+}
+
+.button {
+  padding: 8px 16px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+/* --- Footer --- */
+footer#footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  background-color: #f1f1f1;
+  padding: 32px 16px;
+  margin-top: 32px;
+}
+
+footer#footer h4 {
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+footer#footer p {
+  margin-bottom: 8px;
+}
+
+footer#footer input.input {
+  background-color: #fff;
+}
+
+footer#footer button {
+  background-color: #000;
+  color: #fff;
+}
+
+/* --- Bottom Copyright Bar --- */
+.w3-black {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 24px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    display: none;
+  }
+
+  main.main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  section {
+    grid-template-columns: 1fr;
+  }
+
+  footer#footer {
+    grid-template-columns: 1fr;
+  }
+}
